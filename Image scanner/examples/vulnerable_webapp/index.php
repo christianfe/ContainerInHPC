@@ -1,6 +1,6 @@
 <?php
-$target = $_POST["ip"];
-$cmd = isset($_POST["submit"]) && $target != "" ? shell_exec("ping -c 3" . $target) : "";
+$target = isset($_POST["ip"]) ? $_POST["ip"] : "";
+$cmd = isset($_POST["submit"]) && $target != "" ? shell_exec("ping -c 3 " . $target) : "";
 ?>
 <html>
 
