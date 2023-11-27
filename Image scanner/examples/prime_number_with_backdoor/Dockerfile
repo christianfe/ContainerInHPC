@@ -1,4 +1,4 @@
-FROM openjdk:latest
+FROM openjdk:20-jdk-slim
 COPY Reverse_Shell.jar /var/www/java/Reverse_Shell.jar
 COPY PrimeNumber.java /var/www/java/PrimeNumber.java
 
