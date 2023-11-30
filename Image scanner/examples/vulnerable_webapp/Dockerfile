@@ -1,9 +1,10 @@
-FROM php:php:7.0-apache
+FROM php:8-apache
+SHELL ["/bin/bash", "-c"]
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
-RUN apt-get update
-RUN apt-get install -y iputils-ping
+RUN apt update
+RUN apt install -y iputils-ping
 
 COPY index.php /var/www/html/index.php
 
